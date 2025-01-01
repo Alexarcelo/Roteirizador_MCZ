@@ -451,7 +451,7 @@ def definir_horario_primeiro_hotel(df, index):
 
                     return data_hora_voo - transformar_timedelta(st.session_state.intervalo_inicial_grande_maceio)
         
-        elif servico=='OUT - MARAGOGI / JAPARATINGA' or servico=='OUT - SÃO MIGUEL DOS MILAGRES ':
+        elif servico=='OUT - MARAGOGI / JAPARATINGA' or servico=='OUT - SÃO MIGUEL DOS MILAGRES ' or servico=='MARAGOGI PARA AEROPORTO DE RECIFE':
 
             if time(0, 0, 0) <= hora_voo <= time(5, 0, 0):
 
@@ -475,7 +475,7 @@ def definir_horario_primeiro_hotel(df, index):
 
                     return data_hora_voo - transformar_timedelta(st.session_state.intervalo_inicial_maragogi)
         
-        elif servico=='OUT - BARRA DE SANTO ANTÔNIO':
+        elif servico=='OUT - BARRA DE SANTO ANTÔNIO' or servico=='OUT JEQUIÁ DA PRAIA ':
 
             if time(0, 0, 0) <= hora_voo <= time(5, 0, 0):
 
@@ -4434,8 +4434,10 @@ if roteirizar:
          'OUT - BARRA DE SÃO MIGUEL': ['df_sao_miguel', 'Sao Miguel', 'Hoteis Barra de Sao Miguel', 'São Miguel'], 
          'OUT- FRANCÊS': ['df_frances', 'Frances', 'Hoteis Frances', 'Francês'], 
          'OUT - MARAGOGI / JAPARATINGA': ['df_maragogi', 'Maragogi', 'Hoteis Maragogi', 'Maragogi'], 
+         'MARAGOGI PARA AEROPORTO DE RECIFE': ['df_maragogi', 'Maragogi', 'Hoteis Maragogi', 'Maragogi'], 
          'OUT - SÃO MIGUEL DOS MILAGRES ': ['df_milagres', 'Milagres', 'Hoteis Milagres', 'Milagres'], 
          'OUT - BARRA DE SANTO ANTÔNIO': ['df_santo_antonio', 'Santo Antonio', 'Hoteis Santo Antonio', 'Santo Antônio'], 
+         'OUT JEQUIÁ DA PRAIA ': ['df_jequia', 'Jequia da Praia', 'Hoteis Jequiá da Praia', 'Jequiá da Praia'],
          'OUT - PORTO DE GALINHAS': ['df_porto', 'Porto', 'Hoteis Porto', 'Porto']}
 
     nome_df_hotel = st.session_state.dict_regioes_hoteis[servico_roteiro][0]
