@@ -4425,8 +4425,8 @@ if servico_roteiro and 'df_horario_esp_ultimo_hotel' in st.session_state:
 if roteirizar:
 
     puxar_sequencias_hoteis('1ebhHZGC60jawQqnjnF9V7Jr5DEsRsSeZE60Oxg4KA7g', 
-                            ['Hoteis Orla Maceio', 'Hoteis Grande Maceio', 'Hoteis Maragogi', 'Hoteis Santo Antonio', 'Hoteis Frances', 'Hoteis Milagres', 'Hoteis Barra de Sao Miguel', 'Hoteis Porto'], 
-                            ['df_orla_maceio', 'df_grande_maceio', 'df_maragogi', 'df_santo_antonio', 'df_frances', 'df_milagres', 'df_sao_miguel', 'df_porto'])
+                            ['Hoteis Orla Maceio', 'Hoteis Grande Maceio', 'Hoteis Maragogi', 'Hoteis Santo Antonio', 'Hoteis Frances', 'Hoteis Milagres', 'Hoteis Barra de Sao Miguel', 'Hoteis Porto', 'Hoteis Jequiá da Praia'], 
+                            ['df_orla_maceio', 'df_grande_maceio', 'df_maragogi', 'df_santo_antonio', 'df_frances', 'df_milagres', 'df_sao_miguel', 'df_porto', 'df_jequia'])
 
     st.session_state.dict_regioes_hoteis = \
         {'OUT - ORLA DE MACEIÓ (OU PRÓXIMOS) ': ['df_orla_maceio', 'Orla Maceio', 'Hoteis Orla Maceio', 'Orla Maceió'], 
