@@ -4631,6 +4631,8 @@ if roteirizar:
 
     # df_roteiros_alternativos_4, df_roteiros_apoios_alternativos_4 = gerar_roteiros_apoio(df_roteiros_alternativos_4)
 
+    df_roteiros_apoios_alternativos_4 = pd.DataFrame(columns=df_roteiros_apoios.columns)
+
     # Roteirizando carro principal desconsiderando os hoteis do apoio
 
     # df_roteiros_alternativos_4 = roteirizar_pos_apoios(df_roteiros_apoios_alternativos_4, df_roteiros_alternativos_4)
