@@ -3975,9 +3975,11 @@ def gerar_roteiros_alternativos_4(df_servicos, pax_max_utilitario, pax_max_van, 
                 for comb in combinations(df_agrupado_qtd_paxs.index, r):
 
                     current_sum = df_agrupado_qtd_paxs.loc[list(comb), 'Paxs Grupo Hotel'].sum()
+
+                    n_hoteis = df_agrupado_qtd_paxs.loc[list(comb), 'Est Origem'].sum()
                     
                     # Se for igual ao target, já encontramos a combinação perfeita
-                    if current_sum == target:
+                    if current_sum == target and n_hoteis<=lim_combinacoes:
                         closest_sum = current_sum
                         closest_indices = list(comb)
                         encontrou_solucao = 1
